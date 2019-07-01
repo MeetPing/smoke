@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>HyPe</title>
+<meta  content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.animated_div {
+width:70px;
+height:47px;
+background: #92B901;
+color: #ffffff;
+position: relative;
+font-weight:bold;
+font-size:20px;
+padding:10px;
+}
+.animated_div:active {
+        animation:animated_div 5s 1;
+        -moz-animation:animated_div 5s 1;
+        -webkit-animation:animated_div 5s 1;
+        -o-animation:animated_div 5s 1;
+        border-radius:5px;
+        -webkit-border-radius:5px;       
+        }
+
+@keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50% {transform: rotate(0deg);left:500px;}
+55% {transform: rotate(0deg);left:500px;}
+70% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+
+@-webkit-keyframes animated_div
+{
+0% {-webkit-transform: rotate(0deg);left:0px;}
+25% {-webkit-transform: rotate(20deg);left:0px;}
+50% {-webkit-transform: rotate(0deg);left:500px;}
+55% {-webkit-transform: rotate(0deg);left:500px;}
+70% {-webkit-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {-webkit-transform: rotate(-360deg);left:0px;}
+}
+
+@-moz-keyframes animated_div
+{
+0%  {-moz-transform: rotate(0deg);left:0px;}
+25% {-moz-transform: rotate(20deg);left:0px;}
+50%  {-moz-transform: rotate(0deg);left:500px;}
+55%  {-moz-transform: rotate(0deg);left:500px;}
+70%  {-moz-transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {-moz-transform: rotate(-360deg);left:0px;}
+}
+
+@-o-keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50%  {transform: rotate(0deg);left:500px;}
+55%  {transform: rotate(0deg);left:500px;}
+70%  {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+</style>
+<body>
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="index.html" class="w3-bar-item w3-button">Home</a>
+  <a href="players.html" class="w3-bar-item w3-button">Players</a>
+</div>
+
+<div id="main">
+
+<div class="w3-teal">
+  <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>Home Page</h1>
+  </div>
+</div>
+
+
+<div class="w3-container">
+<p>This is the HyPe Clan official WEBSITE</p>
+</div>
+Click and hold bellow:
+<div class="animated_div">
+HyPe
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+</body>
+</html>
